@@ -1,0 +1,15 @@
+@import "../../../../../styles/mixins";
+
+.select__balance__option {
+  @include flex(center, space-between);
+  cursor: pointer;
+  height: 48px;
+  padding: 0px 14px;
+  &:hover {
+    background-color: var(--secondary);
+  }
+  &__price{
+    color: #ffffff;
+    font-size: 15px;
+  }
+}

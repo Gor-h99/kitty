@@ -1,0 +1,66 @@
+@import "styles/mixins.scss";
+
+.select__balance {
+  max-width: 214px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  &__content {
+    @include flex(center, space-between);
+    background-color: #171224;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 52px;
+    padding: 14px;
+    position: relative;
+    z-index: 2;
+    &__price {
+      color: #ffffff;
+      font-size: 20px;
+    }
+    &__right {
+      @include flex();
+      .currency__container__type {
+        display: none;
+      }
+      &__arrow {
+        width: 20px;
+        height: 20px;
+        fill: #ffffff;
+      }
+    }
+  }
+  &__dropdown {
+    max-width: 214px;
+    width: 100%;
+    grid-gap: 4px;
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    display: grid;
+    gap: 4px;
+    left: 0;
+    overflow: hidden;
+    padding: 4px;
+    position: absolute;
+    top: 64px;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    z-index: 2000;
+  }
+  &__dropdown > :first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  &__dropdown-open {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../styles/mixins.scss';
+.slotPanel {
+  @include flex(center, space-between);
+  flex-direction: column;
+  background-color: var(--background);
+  gap: 16px;
+  min-width: 200px;
+  min-height: 100%;
+  padding: 2px 12px 12px;
+  &__bid__amount__container {
+    width: 100%;
+  }
+  &__button {
+    width: 100%;
+    background-color: var(--secondary);
+    border: none;
+    box-shadow: 0 7px #5f2dca;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    height: 44px;
+    line-height: 1.5;
+    margin-top: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+
+@media (max-width: 1040px) {
+  .slotPanel {
+    &__bid__amount__container {
+      @include flex(center, space-between);
+    }
+  }
+}

@@ -1,0 +1,4 @@
+export const TRANSACTIONS = {
+    DEPOSIT: "DEPOSIT",
+    WITHDRAW: "WITHDRAW"
+}

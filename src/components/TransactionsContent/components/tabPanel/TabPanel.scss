@@ -1,0 +1,27 @@
+@import "styles/mixins.scss";
+.modal__tabpanel {
+  width: fit-content;
+  background-color: var(--primary);
+  border-radius: 4px;
+  display: flex;
+  gap: 8px;
+  padding: 4px;
+  &-item {
+    @include flex();
+    background-color: transparent;
+    color: #6f5cb2;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    height: 32px;
+    line-height: 27px;
+    width: 108px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &-item_active {
+    background-color: #241d3d;
+    color: #fff;
+  }
+}

@@ -1,0 +1,39 @@
+.kitty {
+  width: 160px;
+  height: 150px;
+  padding: 0 4px;
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0.75rem;
+  }
+}
+
+.kitty_spin_row_one {
+  animation: kitty-spin 0.5s 1 ease-in-out;
+}
+
+.kitty_spin_row_two {
+  animation: kitty-spin 0.6s 1 ease-in-out;
+}
+
+.kitty_spin_row_three {
+  animation: kitty-spin 0.7s 1 ease-in-out;
+}
+
+.kitty_spin_row_four {
+  animation: kitty-spin 0.8s 1 ease-in-out;
+}
+
+.kitty_spin_row_five {
+  animation: kitty-spin 0.9s 1 ease-in-out;
+}
+
+@keyframes kitty-spin {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(500px);
+  }
+}

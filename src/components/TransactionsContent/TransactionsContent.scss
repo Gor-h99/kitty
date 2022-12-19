@@ -1,0 +1,86 @@
+@import "styles/mixins.scss";
+
+.Transactions_content {
+  @include flex();
+  flex-direction: column;
+  &_network {
+    &-title {
+      color: #6d6198;
+      font-weight: 600;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      background-color: var(--primary);
+      border-radius: 10px;
+      color: #bfaef8;
+      font-weight: 600;
+      height: 50px;
+      padding-left: 13px;
+    }
+  }
+  &_sellect {
+    @include flex(center, space-between);
+    width: 100%;
+    margin-top: 32px;
+    &-currency {
+      width: 46%;
+    }
+  }
+  &_network {
+    width: 46%;
+  }
+  &_amount {
+    @include flex(flex-start, center);
+    flex-direction: column;
+    margin-top: 32px;
+    &-title {
+      color: #6d6198;
+      font-weight: 600;
+    }
+    &-input {
+      color: #ffffff;
+      font-size: 16px;
+      background-color: var(--primary);
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      height: 50px;
+      line-height: 27px;
+      outline: none;
+      padding: 0 14px;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    &_balance {
+      color: #6d6198;
+      font-size: 13px;
+      margin-top: 4px;
+      text-align: center;
+      font-weight: 600;
+      span {
+        color: #bfaef8;
+      }
+    }
+  }
+  &_button {
+    margin-top: 52px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 27px;
+    text-transform: uppercase;
+    width: 200px;
+    background-color: #773df3;
+    box-shadow: 0 4px #5f2dca;
+    cursor: pointer;
+  }
+}
